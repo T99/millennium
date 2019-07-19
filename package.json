@@ -1,7 +1,7 @@
 {
-	"name": "<name>",
+	"name": "millennium",
 	"version": "0.1.0",
-	"description": "<desc>",
+	"description": "Quick and easy datetime formatting, finding, manipulation, timezoning, etc.",
 	"main": "js/main",
 	"types": ".d.ts/main",
 	"files": [
@@ -18,15 +18,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/<github_org>/<base_name>.git"
+		"url": "git+https://github.com/T99/millennium.git"
 	},
 	"keywords": [],
 	"author": "Trevor Sears <trevorsears.main@gmail.com> (http://trevorsears.io/)",
 	"license": "GPL-3.0-or-later",
 	"bugs": {
-		"url": "https://github.com/<github_org>/<base_name>/issues"
+		"url": "https://github.com/T99/millennium/issues"
 	},
-	"homepage": "https://github.com/<github_org>/<base_name>#readme",
+	"homepage": "https://github.com/T99/millennium#readme",
 	"devDependencies": {
 		"typescript": "latest",
 		"@types/jest": "latest",

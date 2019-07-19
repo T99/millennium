@@ -1,18 +1,18 @@
-# <title>
-<desc>
+# Millenium - Datetime manipulation
+Quick and easy datetime formatting, finding, manipulation, timezoning, etc.
 
-### [Find <name> on NPM.](https://www.npmjs.com/package/<name>)
+### [Find millennium on NPM.](https://www.npmjs.com/package/millennium)
 
 ## Installation
 Install from NPM with
 ```
-$ npm install --save <name>
+$ npm install --save millennium
 ```
 
 ## Basic Usage
 Basic usage instructions here.
 
 ## License
-<name> is made available under the GNU General Public License v3.
+millennium is made available under the GNU General Public License v3.
 
 Copyright (C) 2019 Trevor Sears

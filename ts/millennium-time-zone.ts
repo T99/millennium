@@ -104,7 +104,7 @@ export class MillenniumTimeZone {
 		
 	}
 	
-	public static getTimezoneForOffset(offset: number): MillenniumTimeZone {
+	public static getTimezoneForOffset(offset: number): MillenniumTimeZone | undefined {
 		
 		return MillenniumTimeZone.offsetMap.get(offset);
 		

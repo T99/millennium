@@ -36,5 +36,8 @@
 		"gulp-typescript": "latest",
 		"gulp-uglify-es": "latest",
 		"jest": "latest"
+	},
+	"dependencies": {
+		"builder-base": "^0.1.0"
 	}
 }

@@ -115,7 +115,7 @@ export class MillenniumDate {
 		let beginningOfYear: MillenniumDate = (new MillenniumDateBuilder()).withYear(year).build();
 		let dayInYear: number = MillenniumTimespan.between(beginningOfYear, this).toDays();
 		
-		return MillenniumMonth.getMonthByDayInYear(dayInYear, year);
+		return MillenniumMonth.getMonthByDayInYear(dayInYear, year) as MillenniumMonth;
 		
 	}
 	

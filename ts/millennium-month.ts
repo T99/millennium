@@ -89,19 +89,19 @@ export class MillenniumMonth {
 	public static getMonthByNumber(monthNumber: number): MillenniumMonth {
 		
 		if (monthNumber === 0) throw new Error("ERR | Month 0 does not exist. Did you mean to call TSMonth#getMonthByNumberZeroIndexed(number)?");
-		else if (monthNumber > 0) return MillenniumMonth.monthNumberMap.get((monthNumber - 1) % 12);
-		else return MillenniumMonth.monthNumberMap.get((12 + (monthNumber % 12)) % 12);
+		else if (monthNumber > 0) return MillenniumMonth.monthNumberMap.get((monthNumber - 1) % 12) as MillenniumMonth;
+		else return MillenniumMonth.monthNumberMap.get((12 + (monthNumber % 12)) % 12) as MillenniumMonth;
 		
 	}
 	
 	public static getMonthByNumberZeroIndexed(monthNumber: number): MillenniumMonth {
 		
-		if (monthNumber >= 0) return MillenniumMonth.monthNumberMap.get(monthNumber % 12);
-		else return MillenniumMonth.monthNumberMap.get((12 + (monthNumber % 12)) % 12);
+		if (monthNumber >= 0) return MillenniumMonth.monthNumberMap.get(monthNumber % 12) as MillenniumMonth;
+		else return MillenniumMonth.monthNumberMap.get((12 + (monthNumber % 12)) % 12) as MillenniumMonth;
 		
 	}
 	
-	public static getMonthByDayInYear(day: number, year: number): MillenniumMonth {
+	public static getMonthByDayInYear(day: number, year: number): MillenniumMonth | undefined {
 		
 		let dayCount: number = day;
 		let currentYear: number = year;

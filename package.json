@@ -1,6 +1,6 @@
 {
 	"name": "millennium",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Quick and easy datetime formatting, finding, manipulation, timezoning, etc.",
 	"main": "js/main",
 	"types": ".d.ts/main",
@@ -20,7 +20,14 @@
 		"type": "git",
 		"url": "git+https://github.com/T99/millennium.git"
 	},
-	"keywords": [],
+	"keywords": [
+		"date",
+		"time",
+		"datetime",
+		"milliseconds",
+		"months",
+		"datemath"
+	],
 	"author": "Trevor Sears <trevorsears.main@gmail.com> (http://trevorsears.io/)",
 	"license": "GPL-3.0-or-later",
 	"bugs": {

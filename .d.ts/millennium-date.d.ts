@@ -4,16 +4,15 @@ export declare class MillenniumDate {
     private epochTime;
     private offsetHours;
     private constructor();
-    static fromNow(): MillenniumDate;
-    static fromDate(date: Date): MillenniumDate;
+    static fromNow(offsetHours?: number): MillenniumDate;
+    static fromDate(date: Date, offsetHours?: number): MillenniumDate;
     static fromEpochTime(epochTime: number, offsetHours?: number): MillenniumDate;
     static fromTheBeginningOfTime(offsetHours?: number): MillenniumDate;
     isYearLeapYear(): boolean;
     getYear(): number;
     getMonth(): MillenniumMonth;
     getDayOfMonth(): number;
-    getHourOfDay24HourZeroIndexed(): number;
-    getHourOfDay24Hour(): number;
+    getHourOfDay24Hour(zeroIndexed?: boolean): number;
     getHourOfDay12Hour(): number;
     get12HourPeriod(): string;
     getMinuteOfHour(): number;
@@ -22,5 +21,5 @@ export declare class MillenniumDate {
     getUTCOffset(): number;
     getEpochTime(): number;
     getAdjustedEpochTime(): number;
-    toString(): string;
+    toString(prefer24Hour?: boolean): string;
 }

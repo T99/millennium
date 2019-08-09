@@ -13,8 +13,15 @@
  */
 export class MillenniumDateMath {
 	
-	private constructor() { /* Do nothing. */ }
+	private constructor() { /* Make the class effectively static. */ }
 	
+	/**
+	 * Returns true if the provided year is a leap year.
+	 *
+	 * @param year The year for which to determine its status as a leap year.
+	 * @return true if the provided year is a leap year.
+	 * @see <a href="https://www.wikiwand.com/en/Leap_year#/Algorithm">Wikipedia: Leap Years</a>
+	 */
 	public static isYearLeapYear(year: number): boolean {
 		
 		year = Math.floor(year);
@@ -38,6 +45,7 @@ export class MillenniumDateMath {
 	 * @param {number} begin The year at which to begin counting leap years.
 	 * @param {number} end The year at which to stop counting leap years.
 	 * @returns {number} The number of leap years between the provided years.
+	 * @see {@link MillenniumDateMath#isYearLeapYear}
 	 */
 	public static getLeapYearsBetweenYears(begin: number, end: number): number {
 		
@@ -67,11 +75,20 @@ export class MillenniumDateMath {
 		
 	}
 	
-	public static getOrdinalIndicator(day: number): string {
+	/**
+	 * Returns the proper ordinal indicator for the provided number.
+	 *
+	 * @param number The number for which to return an ordinal indicator.
+	 * @return The proper ordinal indicator for the provided number.
+	 * @see <a href="https://www.wikiwand.com/en/English_numerals#/Ordinal_numbers">Wikipedia: English Ordinal Indicators</a>
+	 */
+	public static getOrdinalIndicator(number: number): string {
 		
-		if (((day % 10) === 1) && day !== 11) return "st";
-		if (((day % 10) === 2) && day !== 12) return "nd";
-		if (((day % 10) === 3) && day !== 13) return "rd";
+		if (number < 0) number *= -1;
+		
+		if (((number % 10) === 1) && number !== 11) return "st";
+		if (((number % 10) === 2) && number !== 12) return "nd";
+		if (((number % 10) === 3) && number !== 13) return "rd";
 		else return "th";
 		
 	}

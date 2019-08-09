@@ -1,2 +1,51 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});class MillenniumDateMath{constructor(){}static isYearLeapYear(e){return(e=Math.floor(e))%4==0&&(e%100!=0||e%400==0)}static getLeapYearsBetweenYears(e,t){let a=Math.min(e,t),r=Math.max(e,t)-1;for(;!MillenniumDateMath.isYearLeapYear(a);)a++;for(;!MillenniumDateMath.isYearLeapYear(r);)r--;if(a>r)return 0;{let e=Math.abs((r-a)/4)+1,t=100*Math.ceil(a/100),i=100*Math.floor(r/100);for(let a=t;a<=i;a+=100)MillenniumDateMath.isYearLeapYear(a)||e--;return e}}static getOrdinalIndicator(e){return e%10==1&&11!==e?"st":e%10==2&&12!==e?"nd":e%10==3&&13!==e?"rd":"th"}}exports.MillenniumDateMath=MillenniumDateMath;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class MillenniumDateMath {
+    constructor() { }
+    static isYearLeapYear(year) {
+        year = Math.floor(year);
+        if (year % 4 === 0) {
+            if (year % 100 === 0) {
+                return (year % 400 === 0);
+            }
+            else
+                return true;
+        }
+        else
+            return false;
+    }
+    static getLeapYearsBetweenYears(begin, end) {
+        let firstLeapYear = Math.min(begin, end);
+        let lastLeapYear = Math.max(begin, end) - 1;
+        while (!MillenniumDateMath.isYearLeapYear(firstLeapYear))
+            firstLeapYear++;
+        while (!MillenniumDateMath.isYearLeapYear(lastLeapYear))
+            lastLeapYear--;
+        if (firstLeapYear > lastLeapYear)
+            return 0;
+        else {
+            let precursoryResult = Math.abs((lastLeapYear - firstLeapYear) / 4) + 1;
+            let firstCentury = Math.ceil(firstLeapYear / 100) * 100;
+            let lastCentury = Math.floor(lastLeapYear / 100) * 100;
+            for (let year = firstCentury; year <= lastCentury; year += 100) {
+                if (!MillenniumDateMath.isYearLeapYear(year))
+                    precursoryResult--;
+            }
+            return precursoryResult;
+        }
+    }
+    static getOrdinalIndicator(number) {
+        if (number < 0)
+            number *= -1;
+        if (((number % 10) === 1) && number !== 11)
+            return "st";
+        if (((number % 10) === 2) && number !== 12)
+            return "nd";
+        if (((number % 10) === 3) && number !== 13)
+            return "rd";
+        else
+            return "th";
+    }
+}
+exports.MillenniumDateMath = MillenniumDateMath;
 //# sourceMappingURL=millennium-date-math.js.map

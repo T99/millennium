@@ -13,7 +13,7 @@
  */
 export class MillenniumTimeUnit {
 	
-	//                                                                 Singular         Plural          Time in Milliseconds
+	//                     Time Unit Name                                               Singular         Plural         Time in Milliseconds
 	
 	public static readonly MILLISECOND: MillenniumTimeUnit =	new MillenniumTimeUnit("millisecond",	"milliseconds",	1);
 	

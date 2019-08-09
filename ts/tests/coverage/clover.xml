@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1565033965451" clover="3.2.0">
+  <project timestamp="1565033965451" name="All files">
+    <metrics statements="194" coveredstatements="141" conditionals="120" coveredconditionals="74" methods="77" coveredmethods="53" elements="391" coveredelements="268" complexity="0" loc="194" ncloc="194" packages="1" files="7" classes="7"/>
+    <file name="millennium-date-builder.ts" path="/home/trevor/dev/projects/javascript/millennium/ts/millennium-date-builder.ts">
+      <metrics statements="25" coveredstatements="23" conditionals="26" coveredconditionals="18" methods="11" coveredmethods="9"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="20" count="2" type="stmt"/>
+      <line num="24" count="273" type="stmt"/>
+      <line num="43" count="273" type="stmt"/>
+      <line num="51" count="136" type="stmt"/>
+      <line num="57" count="68" type="cond" truecount="1" falsecount="1"/>
+      <line num="61" count="68" type="stmt"/>
+      <line num="69" count="0" type="stmt"/>
+      <line num="77" count="30" type="stmt"/>
+      <line num="85" count="14" type="stmt"/>
+      <line num="93" count="5" type="stmt"/>
+      <line num="101" count="1" type="stmt"/>
+      <line num="109" count="0" type="stmt"/>
+      <line num="115" count="273" type="stmt"/>
+      <line num="117" count="273" type="cond" truecount="1" falsecount="1"/>
+      <line num="119" count="273" type="stmt"/>
+      <line num="122" count="273" type="stmt"/>
+      <line num="126" count="273" type="cond" truecount="2" falsecount="0"/>
+      <line num="128" count="136" type="stmt"/>
+      <line num="129" count="136" type="cond" truecount="1" falsecount="1"/>
+      <line num="132" count="136" type="stmt"/>
+      <line num="172" count="273" type="cond" truecount="1" falsecount="1"/>
+    </file>
+    <file name="millennium-date-math.ts" path="/home/trevor/dev/projects/javascript/millennium/ts/millennium-date-math.ts">
+      <metrics statements="14" coveredstatements="14" conditionals="21" coveredconditionals="21" methods="4" coveredmethods="3"/>
+      <line num="14" count="6" type="stmt"/>
+      <line num="29" count="4245" type="cond" truecount="3" falsecount="0"/>
+      <line num="52" count="276" type="stmt"/>
+      <line num="53" count="276" type="stmt"/>
+      <line num="55" count="554" type="stmt"/>
+      <line num="56" count="416" type="stmt"/>
+      <line num="58" count="276" type="cond" truecount="2" falsecount="0"/>
+      <line num="61" count="141" type="stmt"/>
+      <line num="63" count="141" type="stmt"/>
+      <line num="64" count="141" type="stmt"/>
+      <line num="66" count="141" type="stmt"/>
+      <line num="68" count="149" type="cond" truecount="2" falsecount="0"/>
+      <line num="72" count="141" type="stmt"/>
+      <line num="89" count="105" type="cond" truecount="4" falsecount="0"/>
+    </file>
+    <file name="millennium-date.ts" path="/home/trevor/dev/projects/javascript/millennium/ts/millennium-date.ts">
+      <metrics statements="57" coveredstatements="53" conditionals="24" coveredconditionals="18" methods="19" coveredmethods="17"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="31" count="285" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="40" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="54" count="273" type="stmt"/>
+      <line num="60" count="11" type="stmt"/>
+      <line num="66" count="0" type="stmt"/>
+      <line num="72" count="272" type="stmt"/>
+      <line num="73" count="272" type="stmt"/>
+      <line num="76" count="272" type="cond" truecount="1" falsecount="1"/>
+      <line num="80" count="272" type="stmt"/>
+      <line num="82" count="1632" type="cond" truecount="2" falsecount="0"/>
+      <line num="97" count="0" type="stmt"/>
+      <line num="99" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="112" count="272" type="stmt"/>
+      <line num="118" count="136" type="stmt"/>
+      <line num="119" count="136" type="stmt"/>
+      <line num="120" count="136" type="stmt"/>
+      <line num="122" count="136" type="stmt"/>
+      <line num="128" count="68" type="stmt"/>
+      <line num="134" count="68" type="stmt"/>
+      <line num="140" count="36" type="stmt"/>
+      <line num="148" count="36" type="stmt"/>
+      <line num="151" count="36" type="cond" truecount="2" falsecount="0"/>
+      <line num="164" count="2" type="stmt"/>
+      <line num="170" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="176" count="16" type="stmt"/>
+      <line num="184" count="16" type="stmt"/>
+      <line num="190" count="8" type="stmt"/>
+      <line num="199" count="8" type="stmt"/>
+      <line num="205" count="4" type="stmt"/>
+      <line num="215" count="4" type="stmt"/>
+      <line num="221" count="1656" type="stmt"/>
+      <line num="227" count="1648" type="stmt"/>
+      <line num="233" count="1648" type="stmt"/>
+      <line num="239" count="4" type="stmt"/>
+      <line num="240" count="4" type="stmt"/>
+      <line num="241" count="4" type="stmt"/>
+      <line num="242" count="4" type="stmt"/>
+      <line num="243" count="4" type="stmt"/>
+      <line num="244" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="245" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="246" count="4" type="stmt"/>
+      <line num="247" count="4" type="stmt"/>
+      <line num="248" count="4" type="stmt"/>
+      <line num="249" count="4" type="stmt"/>
+      <line num="251" count="4" type="stmt"/>
+      <line num="252" count="4" type="stmt"/>
+      <line num="253" count="4" type="stmt"/>
+      <line num="255" count="4" type="stmt"/>
+    </file>
+    <file name="millennium-month.ts" path="/home/trevor/dev/projects/javascript/millennium/ts/millennium-month.ts">
+      <metrics statements="38" coveredstatements="21" conditionals="26" coveredconditionals="12" methods="20" coveredmethods="9"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="54" count="24" type="stmt"/>
+      <line num="63" count="24" type="cond" truecount="2" falsecount="0"/>
+      <line num="70" count="24" type="cond" truecount="2" falsecount="0"/>
+      <line num="79" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="81" count="0" type="stmt"/>
+      <line num="83" count="0" type="stmt"/>
+      <line num="91" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="92" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="99" count="1093" type="cond" truecount="1" falsecount="1"/>
+      <line num="106" count="136" type="stmt"/>
+      <line num="107" count="136" type="stmt"/>
+      <line num="109" count="136" type="cond" truecount="1" falsecount="1"/>
+      <line num="111" count="0" type="stmt"/>
+      <line num="113" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="120" count="136" type="cond" truecount="1" falsecount="1"/>
+      <line num="122" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="129" count="136" type="stmt"/>
+      <line num="131" count="612" type="stmt"/>
+      <line num="133" count="612" type="cond" truecount="2" falsecount="0"/>
+      <line num="134" count="476" type="stmt"/>
+      <line num="144" count="0" type="stmt"/>
+      <line num="150" count="0" type="stmt"/>
+      <line num="156" count="0" type="stmt"/>
+      <line num="162" count="0" type="stmt"/>
+      <line num="168" count="0" type="stmt"/>
+      <line num="174" count="0" type="stmt"/>
+      <line num="180" count="0" type="stmt"/>
+      <line num="186" count="0" type="stmt"/>
+      <line num="192" count="136" type="stmt"/>
+      <line num="198" count="4" type="stmt"/>
+      <line num="204" count="1569" type="cond" truecount="3" falsecount="1"/>
+      <line num="211" count="136" type="stmt"/>
+      <line num="212" count="136" type="stmt"/>
+      <line num="214" count="481" type="stmt"/>
+      <line num="216" count="136" type="stmt"/>
+      <line num="222" count="0" type="stmt"/>
+    </file>
+    <file name="millennium-time-unit.ts" path="/home/trevor/dev/projects/javascript/millennium/ts/millennium-time-unit.ts">
+      <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="48" count="22" type="stmt"/>
+      <line num="56" count="0" type="stmt"/>
+      <line num="62" count="0" type="stmt"/>
+      <line num="68" count="5983" type="stmt"/>
+    </file>
+    <file name="millennium-timespan.ts" path="/home/trevor/dev/projects/javascript/millennium/ts/millennium-timespan.ts">
+      <metrics statements="32" coveredstatements="12" conditionals="14" coveredconditionals="0" methods="13" coveredmethods="7"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="23" count="276" type="stmt"/>
+      <line num="29" count="276" type="stmt"/>
+      <line num="30" count="276" type="stmt"/>
+      <line num="32" count="276" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="44" count="0" type="stmt"/>
+      <line num="50" count="4" type="stmt"/>
+      <line num="56" count="8" type="stmt"/>
+      <line num="62" count="16" type="stmt"/>
+      <line num="68" count="36" type="stmt"/>
+      <line num="74" count="212" type="stmt"/>
+      <line num="80" count="0" type="stmt"/>
+      <line num="86" count="0" type="stmt"/>
+      <line num="92" count="0" type="stmt"/>
+      <line num="98" count="0" type="stmt"/>
+      <line num="100" count="0" type="stmt"/>
+      <line num="102" count="0" type="stmt"/>
+      <line num="104" count="0" type="stmt"/>
+      <line num="106" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="110" count="0" type="stmt"/>
+      <line num="115" count="0" type="stmt"/>
+      <line num="116" count="0" type="stmt"/>
+      <line num="118" count="0" type="stmt"/>
+      <line num="120" count="0" type="stmt"/>
+      <line num="122" count="0" type="stmt"/>
+      <line num="141" count="0" type="stmt"/>
+      <line num="143" count="0" type="stmt"/>
+      <line num="145" count="0" type="stmt"/>
+      <line num="152" count="0" type="stmt"/>
+    </file>
+    <file name="millennium-week-day.ts" path="/home/trevor/dev/projects/javascript/millennium/ts/millennium-week-day.ts">
+      <metrics statements="22" coveredstatements="14" conditionals="9" coveredconditionals="5" methods="6" coveredmethods="6"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="33" count="14" type="stmt"/>
+      <line num="39" count="14" type="cond" truecount="2" falsecount="0"/>
+      <line num="49" count="21" type="stmt"/>
+      <line num="51" count="84" type="cond" truecount="2" falsecount="0"/>
+      <line num="55" count="0" type="stmt"/>
+      <line num="56" count="0" type="stmt"/>
+      <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="60" count="0" type="stmt"/>
+      <line num="61" count="0" type="stmt"/>
+      <line num="63" count="0" type="stmt"/>
+      <line num="65" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="69" count="0" type="stmt"/>
+      <line num="81" count="232" type="stmt"/>
+      <line num="82" count="232" type="stmt"/>
+      <line num="83" count="232" type="stmt"/>
+      <line num="85" count="232" type="stmt"/>
+      <line num="92" count="8" type="stmt"/>
+      <line num="97" count="8" type="stmt"/>
+      <line num="103" count="88" type="stmt"/>
+    </file>
+  </project>
+</coverage>

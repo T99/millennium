@@ -1,4 +1,4 @@
-# Millennium - Datetime manipulation
+# Millennium - Datetime manipulation the way it should be
 Quick and easy datetime formatting, finding, manipulation, timezoning, etc.
 
 ### [Find millennium on NPM.](https://www.npmjs.com/package/millennium)

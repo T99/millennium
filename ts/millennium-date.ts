@@ -9,6 +9,7 @@ import { MillenniumDateMath } from "./millennium-date-math";
 import { MillenniumTimespan } from "./millennium-timespan";
 import { MillenniumDateBuilder } from "./millennium-date-builder";
 import { MillenniumTimeUnit } from "./millennium-time-unit";
+import { MillenniumWeekDay } from "./millennium-week-day";
 
 /**
  * The main Millennium class that holds date information.
@@ -32,16 +33,19 @@ export class MillenniumDate {
 		
 	}
 	
-	public static fromNow(): MillenniumDate {
+	public static fromNow(offsetHours?: number): MillenniumDate {
 		
 		let now: Date = new Date();
-		return new MillenniumDate(now.getTime(), (-now.getTimezoneOffset() / 60));
+		
+		if (offsetHours !== undefined) return new MillenniumDate(now.getTime(), offsetHours);
+		else return new MillenniumDate(now.getTime(), (-now.getTimezoneOffset() / 60));
 		
 	}
 	
-	public static fromDate(date: Date): MillenniumDate {
+	public static fromDate(date: Date, offsetHours?: number): MillenniumDate {
 		
-		return new MillenniumDate(date.getTime(), (-date.getTimezoneOffset() / 60));
+		if (offsetHours !== undefined) return new MillenniumDate(date.getTime(), offsetHours);
+		else return new MillenniumDate(date.getTime(), (-date.getTimezoneOffset() / 60));
 		
 	}
 	
@@ -131,7 +135,7 @@ export class MillenniumDate {
 		
 	}
 	
-	public getHourOfDay24HourZeroIndexed(): number {
+	public getHourOfDay24Hour(zeroIndexed: boolean = false): number {
 		
 		let beginningOfDay: MillenniumDate =
 			(new MillenniumDateBuilder())
@@ -140,16 +144,18 @@ export class MillenniumDate {
 			.withDay(this.getDayOfMonth())
 			.build();
 		
-		return (Math.floor(MillenniumTimespan.between(beginningOfDay, this).toHours()));
+		// Return the rounded-down result of the amount of time between the beginning of the day and this MillenniumDate.
+		let zeroIndexedResult: number = Math.floor(MillenniumTimespan.between(beginningOfDay, this).toHours());
 		
-	}
-	
-	public getHourOfDay24Hour(): number {
-		
-		let zeroIndexed: number = this.getHourOfDay24HourZeroIndexed();
-		
-		if (zeroIndexed === 0) return 12;
-		else return zeroIndexed + 1;
+		// If the zero-indexed result is desired, return it, otherwise calculate the one-indexed result.
+		if (zeroIndexed) return zeroIndexedResult;
+		else {
+			
+			//
+			if (zeroIndexedResult === 0) return 12;
+			else return zeroIndexedResult + 1;
+			
+		}
 		
 	}
 	
@@ -161,7 +167,7 @@ export class MillenniumDate {
 	
 	public get12HourPeriod(): string {
 		
-		return (this.getHourOfDay24HourZeroIndexed() > 12 ? "PM" : "AM");
+		return (this.getHourOfDay24Hour(true) > 12 ? "PM" : "AM");
 		
 	}
 	
@@ -172,7 +178,7 @@ export class MillenniumDate {
 			.withYear(this.getYear())
 			.withMonth(this.getMonth())
 			.withDay(this.getDayOfMonth())
-			.withHours(this.getHourOfDay24HourZeroIndexed())
+			.withHours(this.getHourOfDay24Hour(true))
 			.build();
 		
 		return (Math.floor(MillenniumTimespan.between(beginningOfHour, this).toMinutes()));
@@ -186,7 +192,7 @@ export class MillenniumDate {
 			.withYear(this.getYear())
 			.withMonth(this.getMonth())
 			.withDay(this.getDayOfMonth())
-			.withHours(this.getHourOfDay24HourZeroIndexed())
+			.withHours(this.getHourOfDay24Hour(true))
 			.withMinutes(this.getMinuteOfHour())
 			.build();
 		
@@ -201,7 +207,7 @@ export class MillenniumDate {
 			.withYear(this.getYear())
 			.withMonth(this.getMonth())
 			.withDay(this.getDayOfMonth())
-			.withHours(this.getHourOfDay24HourZeroIndexed())
+			.withHours(this.getHourOfDay24Hour(true))
 			.withMinutes(this.getMinuteOfHour())
 			.withSeconds(this.getSecondOfMinute())
 			.build();
@@ -228,14 +234,15 @@ export class MillenniumDate {
 		
 	}
 	
-	public toString(): string {
+	public toString(prefer24Hour: boolean = false): string {
 		
+		let dayOfWeek: string = MillenniumWeekDay.getViaDate(this).getName();
 		let month: string = this.getMonth().getMonthName();
 		let day: number = this.getDayOfMonth();
 		let ordinalIndicator: string = MillenniumDateMath.getOrdinalIndicator(day);
 		let year: number = this.getYear();
 		let utcString: string = "(UTC" + (this.getUTCOffset() >= 0 ? "+" : "") + this.getUTCOffset() + ")";
-		let hour: string = this.getHourOfDay12Hour().toString();
+		let hour: string = (prefer24Hour ? this.getHourOfDay24Hour().toString() : this.getHourOfDay12Hour().toString());
 		let minute: string = this.getMinuteOfHour().toString();
 		let second: string = this.getSecondOfMinute().toString();
 		let millisecond: string = this.getMillisecondOfSecond().toString();
@@ -246,7 +253,7 @@ export class MillenniumDate {
 		while (millisecond.length < 3) millisecond = "0" + millisecond;
 		
 		return (
-			month + " " + day + ordinalIndicator + ", " + year + " " +
+			dayOfWeek + ", " + month + " " + day + ordinalIndicator + ", " + year + " " +
 			utcString + " " + hour + ":" + minute + ":" + second + "." + millisecond + " " + period
 		);
 		
